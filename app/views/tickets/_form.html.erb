@@ -1,0 +1,62 @@
+<%= form_with(model: ticket, local: true) do |form| %>
+  <% if ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+        <% ticket.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :booking_id %>
+    <%= form.text_field :booking_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seat_no %>
+    <%= form.text_field :seat_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base_fare %>
+    <%= form.text_field :base_fare %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discount %>
+    <%= form.text_field :discount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gst %>
+    <%= form.text_field :gst %>
+  </div>
+
+  <div class="field">
+    <%= form.label :net_amount %>
+    <%= form.text_field :net_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_canceled %>
+    <%= form.check_box :is_canceled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :canceled_amount %>
+    <%= form.text_field :canceled_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :refound_amount %>
+    <%= form.text_field :refound_amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

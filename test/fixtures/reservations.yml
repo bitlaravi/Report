@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  route: one
+  origin: MyString
+  destination: MyString
+  departure_time: 2019-10-14 11:33:01
+  duration: 2019-10-14 11:33:01
+  boarding_point: MyString
+  dropping_point: MyString
+  travel_date: 2019-10-14
+
+two:
+  route: two
+  origin: MyString
+  destination: MyString
+  departure_time: 2019-10-14 11:33:01
+  duration: 2019-10-14 11:33:01
+  boarding_point: MyString
+  dropping_point: MyString
+  travel_date: 2019-10-14

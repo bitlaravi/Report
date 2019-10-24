@@ -1,0 +1,70 @@
+<%= form_tag(search_report_path, remote: true, method: :get) do |form| %>
+	<br><br>
+	<div align="center" class="container-fluid" >
+		<div class="row">
+			<div class="col-sm-2"></div>
+  		<div align="center" class="col-sm-8 " style="border: 1px solid black;border-radius: 15px;"><br>
+				<h1 align="center" style="font-family: bold;">Report</h1><br>
+				<div class="container-fluid">
+					<div class="form-group"style="font-family: bold;font-size: 1.2em;">
+						<div class='col-md-6'>
+			        <div class="form-group">
+			        	<label for="from_date" class="col-sm-4">From Date:</label>
+			        		<div class="col-sm-8">
+				            <div  class='input-group date' id='datetimepicker6'>
+			                <input id = 'from_date' name="from_date" type='text' class="form-control" />
+			                <span class="input-group-addon">
+			                    <span class="glyphicon glyphicon-calendar"></span>
+			                </span>
+				            </div>
+				          </div>
+			        </div>
+				    </div>
+				    <div class='col-md-6'>
+			        <div class="form-group">
+			        	<label for="to_date" class="col-sm-4">To Date:</label>
+			        		<div class="col-sm-8">
+				            <div   class='input-group date' id='datetimepicker7'>
+			                <input id = 'to_date' name="to_date" type='text' class="form-control" />
+			                <span  class="input-group-addon">
+			                    <span class="glyphicon glyphicon-calendar"></span>
+			                </span>
+				            </div>
+				          </div>
+			        </div>
+				    </div>
+				  </div><br><br><br>
+					  <div class="form-group" style="font-family: bold;font-size: 2em;">
+						  <input class="mr-3" class="mr-3" type="radio" name="date_select" value="Issued Date"> Issued Date
+							<input class="mr-3" class="mr-3" type="radio" name="date_select" value="Travel Date"> Travel Date
+						</div><br><br>
+				  <div class="actions">
+				    <button type="submit" class="btn btn-success">Run Report</button>
+				  </div><br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+	
+<div id="report_result">
+	
+</div>
+<div id="page">
+	
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker({format: 'YYYY-MM-DD'});	
+        $('#datetimepicker7').datetimepicker({
+        		format: 'YYYY-MM-DD',
+            useCurrent: false
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>

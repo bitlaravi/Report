@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Booking:</strong>
+  <%= @ticket.booking_id %>
+</p>
+
+<p>
+  <strong>Seat no:</strong>
+  <%= @ticket.seat_no %>
+</p>
+
+<p>
+  <strong>Base fare:</strong>
+  <%= @ticket.base_fare %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @ticket.discount %>
+</p>
+
+<p>
+  <strong>Gst:</strong>
+  <%= @ticket.gst %>
+</p>
+
+<p>
+  <strong>Net amount:</strong>
+  <%= @ticket.net_amount %>
+</p>
+
+<p>
+  <strong>Is canceled:</strong>
+  <%= @ticket.is_canceled %>
+</p>
+
+<p>
+  <strong>Canceled amount:</strong>
+  <%= @ticket.canceled_amount %>
+</p>
+
+<p>
+  <strong>Refound amount:</strong>
+  <%= @ticket.refound_amount %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

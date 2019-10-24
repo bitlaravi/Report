@@ -1,0 +1,78 @@
+<style >
+  div{text-align: center;}
+</style>
+<p id="notice"><%= notice %></p>
+
+<div class="col-sm-2"></div>
+<div class="container-fluid">
+  <div align="center" class="col-sm-8">
+    <div class="container-fluid">  
+      <div align="center" class="form-group"style="font-family: bold;font-size: 1.2em;">
+        <label for="user" class="col-sm-2">PNR No:</label>
+        <div class="col-sm-5">
+          <%= @booking.pnr_no %>
+        </div>
+      </div>
+      <p>
+        <strong>Pnr no:</strong>
+        <%= @booking.pnr_no %>
+      </p>
+
+      <p>
+        <strong>Origin:</strong>
+        <%= @booking.origin %>
+      </p>
+
+      <p>
+        <strong>Destination:</strong>
+        <%= @booking.destination %>
+      </p>
+
+      <p>
+        <strong>Issued date:</strong>
+        <%= @booking.issued_date %>
+      </p>
+
+      <p>
+        <strong>Travel date:</strong>
+        <%= @booking.travel_date %>
+      </p>
+
+      <p>
+        <strong>Issued by:</strong>
+        <%= @booking.issued_by %>
+      </p>
+
+      <p>
+        <strong>Is canceled:</strong>
+        <%= @booking.is_canceled %>
+      </p>
+
+      <p>
+        <strong>Route:</strong>
+        <%= @booking.route.service_name %>
+      </p>
+
+      <p>
+        <strong>Total fare:</strong>
+        <%= @booking.total_fare %>
+      </p>
+      <div>
+        <%if @user.present?%>
+          <%= link_to 'Edit', edit_user_booking_path(@user,@booking), class:'btn btn-default' %> |
+          <%= link_to 'Back', user_bookings_path(@user,@booking), class:'btn btn-default' %>
+        <%else%>
+          <%= link_to 'Edit', edit_booking_path(@booking), class:'btn btn-default' %> |
+          <%= link_to 'Back', bookings_path(@booking), class:'btn btn-default' %>
+        <% end -%>
+      </div><br>
+      <div>
+        <%if @user.present?%>
+          <%= link_to 'New Booking', new_user_booking_path(@user), class:'btn btn-default' %>
+        <%else%>   
+          <%= link_to 'New Booking', new_booking_path(@booking), class:'btn btn-default' %>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+</div>

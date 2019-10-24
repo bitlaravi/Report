@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service name:</strong>
+  <%= @route.service_name %>
+</p>
+
+<p>
+  <strong>Service num:</strong>
+  <%= @route.service_num %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @route.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @route.destination %>
+</p>
+
+<p>
+  <strong>Total seats:</strong>
+  <%= @route.total_seats %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @route.duration %>
+</p>
+
+<p>
+  <strong>Bording point:</strong>
+  <%= @route.bording_point %>
+</p>
+
+<p>
+  <strong>Dropping point:</strong>
+  <%= @route.dropping_point %>
+</p>
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>

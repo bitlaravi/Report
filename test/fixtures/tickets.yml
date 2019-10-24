@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking: one
+  seat_no: MyString
+  base_fare: MyString
+  discount: MyString
+  gst: MyString
+  net_amount: MyString
+  is_canceled: MyString
+  canceled_amount: MyString
+  refound_amount: MyString
+
+two:
+  booking: two
+  seat_no: MyString
+  base_fare: MyString
+  discount: MyString
+  gst: MyString
+  net_amount: MyString
+  is_canceled: MyString
+  canceled_amount: MyString
+  refound_amount: MyString

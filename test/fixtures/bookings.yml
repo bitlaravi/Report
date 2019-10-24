@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  booking_id_no: MyString
+  pnr_no: MyString
+  origin: MyString
+  destination: MyString
+  issued_date: MyString
+  travel_date: MyString
+  issued_by: MyString
+  is_canceled: MyString
+  route: MyString
+  total_fare: MyString
+
+two:
+  user: two
+  booking_id_no: MyString
+  pnr_no: MyString
+  origin: MyString
+  destination: MyString
+  issued_date: MyString
+  travel_date: MyString
+  issued_by: MyString
+  is_canceled: MyString
+  route: MyString
+  total_fare: MyString

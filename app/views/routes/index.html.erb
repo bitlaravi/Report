@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Routes</h1>
+<%= link_to 'Back',users_path(@users), class:'btn btn-success' %>
+<%= link_to 'Resevation',route_reservations_path(@routes), class:'btn btn-success' %>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Service name</th>
+      <th>Service num</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Total seats</th>
+      <th>Duration</th>
+      <th>Bording point</th>
+      <th>Dropping point</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @routes.each do |route| %>
+      <tr>
+        <td><%= route.service_name %></td>
+        <td><%= route.service_num %></td>
+        <td><%= route.origin %></td>
+        <td><%= route.destination %></td>
+        <td><%= route.total_seats %></td>
+        <td><%= route.duration %></td>
+        <td><%= route.bording_point %></td>
+        <td><%= route.dropping_point %></td>
+        <td><%= link_to 'Show', route %></td>
+        <td><%= link_to 'Edit', edit_route_path(route) %></td>
+        <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Route', new_route_path %>

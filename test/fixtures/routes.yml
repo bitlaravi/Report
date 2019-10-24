@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_name: MyString
+  service_num: MyString
+  origin: MyString
+  destination: MyString
+  total_seats: 1
+  duration: MyString
+  bording_point: MyString
+  dropping_point: MyString
+
+two:
+  service_name: MyString
+  service_num: MyString
+  origin: MyString
+  destination: MyString
+  total_seats: 1
+  duration: MyString
+  bording_point: MyString
+  dropping_point: MyString
